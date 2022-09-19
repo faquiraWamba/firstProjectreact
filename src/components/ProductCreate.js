@@ -26,14 +26,15 @@ function ProductCreate() {
         const image ={
             hash :  hash
         }
-        console.log(hash)
-        await axios.post('http://localhost:8080/api/createpost', productData,{headers: {"content-Type":'multipart/form-data'}})
+        console.log('image',fileInput.current.files[0])
+        console.log('formdata',productData)
+       /* await axios.post('http://localhost:8080/api/createpost', productData,{headers: {"content-Type":'multipart/form-data'}})
         .then((res)=>{
             console.log("mon token",localStorage.token)
         })
         .catch((e)=>{
             console.log('e', e)
-        })
+        })*/
         
     }
 
