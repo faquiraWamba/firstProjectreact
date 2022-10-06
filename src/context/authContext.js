@@ -16,17 +16,21 @@ export function AuthProvider ({children}) {
     const [errorMessage, setErrorMessage] = useState("")
     const [successMessage, setSuccessrMessage] = useState("")
     const [loader, setLoader] = useState(false)
+    const [isOpen, setOpen] = useState(
+        JSON.parse(localStorage.getItem('is-open')) || false
+      );
 
-    let navigate = useNavigate()
-
+   let navigate = useNavigate()
 
     const login = async (data) => {
         try {
-
             setLoader(true)
             await axios.post('http://localhost:8080/api/login', data)
                 .then((res)=>{
+
                     localStorage.setItem('token', res.data.user.token)
+                    setOpen(!isOpen);
+
                     for (const [key, value] of Object.entries(res.data.user)) {
                         localStorage.setItem(key, value)
                     }

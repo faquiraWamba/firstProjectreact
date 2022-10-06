@@ -3,7 +3,6 @@ import {Link, useNavigate} from 'react-router-dom'
 import { BsUser } from 'react-icons/bs';
 import { useAuth } from '../context/authContext';
 import axios from 'axios';
-import Dashboard from './Dashboard';
 
 const Header = () => {
     const [navbar, setNavbar] = useState(false);
@@ -30,7 +29,7 @@ const Header = () => {
    return (
 
 
-    <header className={navbar? 'flex top-0 border justify-between m-3 w-[97vw] items-center h-16 fixed  duration-400  bg-white/[0.9]  ' : 'flex top-0 border-transparent border z-50 justify-between m-3 w-[97vw] items-center h-16 fixed duration-400'}>
+    <header className={navbar? 'flex top-0 border justify-between m-3 w-[97vw] items-center h-16 fixed  duration-400  bg-white/[0.9]  ' : 'flex top-0 border-transparent border z-40 justify-between m-3 w-[97vw] items-center h-16 fixed duration-400'}>
         <span className='font-bold text-5xl'>LOGO</span>
         <nav className='w-1/3 '>
             

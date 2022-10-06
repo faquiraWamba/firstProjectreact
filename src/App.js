@@ -13,6 +13,7 @@ import ProtectedAuthRoutes from './components/ProtectedAuthRoutes';
 import ProductDetails from './components/ProductDetails';
 import Dashboard from './components/Dashboard';
 import ProductCreate from './components/ProductCreate';
+import ProductUpdate from './components/ProductUpdate';
 
 const App = () => {
    
@@ -30,7 +31,8 @@ const App = () => {
                             <Route path='/contact' element ={<Contact />}></Route>
                             <Route path='/dashboard' element ={<Dashboard />}></Route>
                             <Route path='/createProduct' element ={<ProductCreate />}></Route>
-                            <Route path="/products/:id" exact element={<ProductDetails/>}/>
+                            <Route path='/products/:id' exact element={<ProductDetails/>}></Route>
+                            <Route path="/productUpdate/:id"  element={<ProductUpdate/>}></Route>
                         </Route >
                         <Route element={<ProtectedAuthRoutes/>}>
                             <Route path="/login" element={<Login/>}/>

@@ -4,9 +4,11 @@ import { BsArrowLeft, BsArrowRight, BsChevronLeft, BsChevronRight } from "react-
 
 const Article = ({title, price, img1, img2, id}) => {
 
+
     const [article, setArticle] = useState(true)
     const [arrowLeft, setArrowLeft] = useState(true)
     const [arrowRight, setArrowRight] = useState(true)
+    
 
 
     return ( 
@@ -15,7 +17,7 @@ const Article = ({title, price, img1, img2, id}) => {
                 <div onMouseEnter={() => setArticle(false)} onMouseLeave={() => setArticle(true)} 
                     className={"h-4/5 relative w-96  border mx-4 bg-[#ECECEC]"}>
                     
-                    <img  className={article? "absolute top-0 h-full w-full  z-20 duration-1000" : "absolute top-0 h-full w-full  z-20 hidden duration-1000"  } src= {`http://localhost:8080/${img1}`} salt="shoes"/>
+                    <img  className={article? "absolute top-0 h-full w-full  z-20 duration-1000" : "absolute top-0 h-full w-full  z-20 hidden duration-1000"  } src= {`http://localhost:8080/${img1}`} alt="shoes"/>
 
                     <img className={article ? "absolute top-0 h-full w-full   z-10 hidden duration-1000 " : "absolute top-0 h-full w-full  duration-1000  z-10"} src ={`http://localhost:8080/${img2}`} alt="shoes"/>
                     
