@@ -22,8 +22,9 @@ const ProductDetails = () => {
         .catch((err)=>{
             console.log(err)
         })}
-    
+    const productImgs = productInfos.images
     console.log('info',productInfos)
+    console.log('images',productImgs)
     useEffect(()=>{
         getProductDetails()  
     },[])
@@ -39,9 +40,13 @@ const ProductDetails = () => {
                 <div className='font-bold text-lg'>{productInfos.price} FCFA</div>
             </h2>
 
-            <div className='h-100 w-100 flex justify-around'>
-            
-            </div>    
+            <div className='h-80 w-80'>
+
+               
+                            <img className='h-full w-full' alt='article img' src = {`http://localhost:8080/${productInfos.images[0].hash}`}/>
+                       
+
+            </div>
      
         </>
      );

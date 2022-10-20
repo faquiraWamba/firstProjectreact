@@ -32,16 +32,15 @@ const Shop = () => {
   
     return (
       <>
-      <div className='mt-40'>Welcome to Product</div>
-      <BsSnapchat className='text-5xl'/>
+      <div className='mt-40'>Our Products</div>
+      
       {loader ? <h1 className='font-bold text-3xl'>Loading...</h1> :
         <div className='flex flex-wrap'>
           {
             getProducts.map((product) => {
               return (
                 <>
-                {product.title}
-                  <Article price={`$ ${product.price}`} title ={product.title} img1={product.images[0].hash} img2={product.images[1].hash } id={product.id} />
+                  <Article price={` ${product.price} FCFA`} title ={product.title} img1={product.images[0].hash} img2={product.images[1].hash } id={product.id} />
                 </>
                   )
             })

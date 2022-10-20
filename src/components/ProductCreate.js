@@ -48,7 +48,7 @@ function ProductCreate() {
         formdata.append('price', price)
         formdata.append('authorId', localStorage.id)
                  
-
+        console.log(formdata)
        await axios.post('http://localhost:8080/api/createpost', formdata,
        {
         headers: {

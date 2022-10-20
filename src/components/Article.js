@@ -13,9 +13,9 @@ const Article = ({title, price, img1, img2, id}) => {
 
     return ( 
         <Link to={`/products/${id}`}>
-            <div  className="mt-40 border h-[555px] border-black px-4" >
+            <div  className="mt-40 border h-[560px] border-black px-4 flex flex-col justify-between" >
                 <div onMouseEnter={() => setArticle(false)} onMouseLeave={() => setArticle(true)} 
-                    className={"h-4/5 relative w-96  border mx-4 bg-[#ECECEC]"}>
+                    className={"h-[75%] relative w-96  border mx-4 bg-[#ECECEC]"}>
                     
                     <img  className={article? "absolute top-0 h-full w-full  z-20 duration-1000" : "absolute top-0 h-full w-full  z-20 hidden duration-1000"  } src= {`http://localhost:8080/${img1}`} alt="shoes"/>
 
@@ -39,6 +39,9 @@ const Article = ({title, price, img1, img2, id}) => {
                 <div className="mx-4">
                     <div className="font-bold">{title}</div>
                     <div className="font-thin ">{price}</div>
+                </div>
+                <div className="bg-black mx-4 px-2 py-3 w-1/2 text-center rounded self-center">
+                    <button className="text-white  ">Add to card</button>
                 </div>
             </div>
         </Link>
